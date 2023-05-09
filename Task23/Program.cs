@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 class Program
 {
@@ -8,10 +8,20 @@ class Program
         int n = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Таблица кубов чисел:");
+        PrintCubes(n);
+    }
+
+    static void PrintCubes(int n)
+    {
         for (int i = 1; i <= n; i++)
         {
-            int cube = i * i * i;
+            int cube = Cube(i);
             Console.Write($"{cube} ");
         }
+    }
+
+    static int Cube(int x)
+    {
+        return x * x * x;
     }
 }
